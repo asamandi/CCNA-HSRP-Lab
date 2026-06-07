@@ -1,0 +1,2 @@
+show standby brief
+show ip interface brief

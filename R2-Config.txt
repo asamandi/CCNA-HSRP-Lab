@@ -1,0 +1,16 @@
+enable
+configure terminal
+
+hostname R2
+
+interface g0/0
+ ip address 192.168.10.3 255.255.255.0
+ no shutdown
+
+interface g0/0
+ standby 1 ip 192.168.10.1
+ standby 1 priority 100
+ standby 1 preempt
+
+end
+copy running-config startup-config

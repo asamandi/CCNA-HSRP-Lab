@@ -1,0 +1,26 @@
+enable
+configure terminal
+
+hostname S1
+
+vlan 10
+ name USERS
+
+interface fa0/1
+ switchport mode access
+ switchport access vlan 10
+
+interface fa0/2
+ switchport mode access
+ switchport access vlan 10
+
+interface g0/1
+ switchport mode access
+ switchport access vlan 10
+
+interface g0/2
+ switchport mode access
+ switchport access vlan 10
+
+end
+copy running-config startup-config
